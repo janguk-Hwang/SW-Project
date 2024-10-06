@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.App-header {
+  color: black;
+  display: flex;
+  grid-area: header;
+  background-color: #f5f7fa;
+  color: white;
+  padding: 1%;
+  text-align: center;
+}
+
+.logo-image {
+  max-width: 10%;
+  height: auto;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar ul {
+  margin-top: 10px;
+  display: flex;
+  list-style: none;
+  padding-left: 50px;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* 로그인/회원가입 버튼 */
+.auth-buttons {
+  margin-left: auto;
+  display: flex;
+}
+
+.auth-buttons .login, .auth-buttons .signup {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+ 
+.auth-buttons .login {
+  background-color: #f5f7fa;
+  color: #4caf4f;
+  font-weight: bold;
+}
+
+.auth-buttons .signup {
+  background-color: #4caf4f;
+  color: white;
+  border-radius: 10px;
+}
+
+.App-main {
+  grid-area: main;
+  background-color: white;
+  text-align: center;
+}
+
+.hero {
+  background-color: #f5f7fa;
+  padding-left: 7%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-content {
+  text-align: left;
+  margin-right: 20px;
+}
+
+.hero-image {
+  max-width: 20%;
+  margin-right: 10%;
+  height: auto;
+}
+
+.cta-button {
+  padding: 15px 20px;
+  background-color: #4caf4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #004d40;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3개의 열로 나누기 */
+  gap: 20px;
+}
+
+.feature {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.feature-image {
+  max-width: 20%;
+  height: auto;
+}
+
+.App-footer {
+  display: flex;
+  min-height: 250px;
+  background-color: #263238; /* 배경 색상 */
+  color: white; /* 글자 색상 */
+  text-align: left; /* 왼쪽 정렬 */
+  padding-top: 1%;
+}
+
+.footer-bottom {
+  display: grid;
+  justify-content: space-between; /* 양 끝에 정렬 */
+  align-items: center; /* 수직 정렬 */
+  padding-left: 10%;
+}
+
+.footer-bottom img.logo-image {
+  min-width: 190px;
+  min-height: 30px;
+}
+
+.footer-links {
+  padding-left: 15%;
+  margin-top: 1%;
+  display: flex; /* 플렉스 박스를 사용하여 링크 섹션을 나란히 배치 */
+  justify-content: space-between; /* 각 섹션 사이에 공간을 두기 */
+}
+
+.footer-links > div {
+  flex: 1; /* 각 섹션이 동일한 너비를 가짐 */
+  margin-right: 120px; /* 오른쪽 여백 */
+}
+
+.footer-links h3 {
+  margin-bottom: 10px; /* 제목과 목록 사이의 간격 */
+}
+
+.footer-links ul {
+  list-style: none; /* 목록 스타일 제거 */
+  padding-top: 5px; /* 패딩 제거 */
+}
+
+.footer-links ul li {
+  margin-top: 10px; /* 각 항목 사이의 간격 */
+}
+
+.footer-links a {
+  color: white; /* 링크 색상 */
+  text-decoration: none; /* 링크의 기본 밑줄 제거 */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+.social-icons {
+  display: flex; /* 플렉스 박스를 사용하여 소셜 아이콘을 나란히 배치 */
+}
+
+.social-icons a {
+  color: white; /* 소셜 아이콘 색상 */
+  margin-right: 15px; /* 아이콘 사이의 간격 */
+}
+
+.social-icons a:hover {
+  text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+.newsletter select {
+  padding: 5px; /* 패딩 */
+  margin-top: 10px; /* 상단 여백 */
+}
+
+.faq-image {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 100px;
+  height: auto;
+  z-index: 1000;
+}
